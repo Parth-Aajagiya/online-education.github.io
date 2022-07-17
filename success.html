@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+   <head>
+     <meta charset="UTF-8" />
+<meta http-equiv="refresh" content="5; url=index.html" />
+
+   </head>
+   <style type="text/css">
+      #clock {
+   width: 150px;
+   height: 150px;
+   border-radius: 50%;
+   background-color: lightseagreen;
+   margin: auto;
+}
+
+span {
+   display: block;
+   width: auto;
+   margin: auto;
+   padding-top: 50px;
+   text-align: center;
+   font-size: 80px;
+}
+   </style>
+
+   <script type="text/javascript">
+      timeLeft = 5;
+
+function countdown() {
+   timeLeft--;
+   document.getElementById("seconds").innerHTML = String( timeLeft );
+   if (timeLeft > 0) {
+      setTimeout(countdown, 1000);
+   }
+};
+
+setTimeout(countdown, 1000);
+   </script>
+   <body>
+      <p>SuccessFull. We will send you News in given Mail-Id Or you can click given link below...</p>
+             <a href="index.html">Home</a>
+
+      <div id="clock">
+   <span id="seconds">5</span>
+</div>
+   </body>
+</html>
